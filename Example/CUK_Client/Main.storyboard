@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KNS CUK_CLIENT TRYOUTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P77-Ox-HqP">
+                                <rect key="frame" x="152" y="90" width="286" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="P77-Ox-HqP" secondAttribute="height" multiplier="286:69" id="yJf-mI-Q0L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P77-Ox-HqP" firstAttribute="width" secondItem="TpU-gO-2f1" secondAttribute="height" multiplier="143:300" id="Gkv-f6-fcT"/>
+                            <constraint firstAttribute="centerX" secondItem="P77-Ox-HqP" secondAttribute="centerX" constant="5" id="Thz-m9-ujr"/>
+                            <constraint firstItem="P77-Ox-HqP" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="70" id="lJT-8A-TeM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="409" y="384"/>
         </scene>
     </scenes>
 </document>

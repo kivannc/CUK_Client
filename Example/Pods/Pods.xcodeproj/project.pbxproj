@@ -62,6 +62,10 @@
 		88F7031EE96F3D548929589A /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = AB281D6B392264FFB9859CDB /* UIButton+AFNetworking.m */; };
 		89A6173BBE99616234980B92 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A315F556A254F64100813CD /* UIRefreshControl+AFNetworking.m */; };
 		8AF2CD9C08BA578B84D276EC /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 142393FF1FB60CEC0895DDA2 /* AFNetworkActivityIndicatorManager.m */; };
+		8B83612F1B330C32004657FB /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B83612E1B330C32004657FB /* Constants.h */; };
+		8B8361301B330C32004657FB /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B83612E1B330C32004657FB /* Constants.h */; };
+		8B8361311B330C32004657FB /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B83612E1B330C32004657FB /* Constants.h */; };
+		8B8361321B330C32004657FB /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B83612E1B330C32004657FB /* Constants.h */; };
 		8D25E8B2E7379D21A5D08A70 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEC603C641ED3C1C4ADA605 /* AFURLResponseSerialization.m */; };
 		8F1B48F8EFAB1D0DDCC18BCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99D0D5059C519F67E35FDFB /* Foundation.framework */; };
 		906EDE40108F5D03D240BED8 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = BEA10A688F813FB2E097EA4F /* AFHTTPRequestOperation.h */; };
@@ -206,6 +210,7 @@
 		84DB8139FFBE151DBA456084 /* Pods-CUK_Client_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CUK_Client_Example-resources.sh"; sourceTree = "<group>"; };
 		85AB994EDDF127E12DD7CCC8 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		87530FC86C55C8EC9608336C /* Pods-CUK_Client_Example-AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CUK_Client_Example-AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		8B83612E1B330C32004657FB /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8F9F251CB7BB5372730FDC3B /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
 		906A6F7A8D6CFED532714351 /* Pods-CUK_Client_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CUK_Client_Example-dummy.m"; sourceTree = "<group>"; };
 		984AF71DEEA571071FDA057D /* Pods-CUK_Client_Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CUK_Client_Tests-environment.h"; sourceTree = "<group>"; };
@@ -438,6 +443,7 @@
 		50B26FF3008C2B6A84C62E55 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8B83612E1B330C32004657FB /* Constants.h */,
 				58F479539B08EDF2F9AE23F3 /* CUK_Client.h */,
 				7B54F4CD203C0247B4AFFA6E /* CUK_Client.m */,
 			);
@@ -593,6 +599,7 @@
 				6A466D0E991DED21198C3587 /* AFURLConnectionOperation.h in Headers */,
 				649960988EBA8C78E3E24F25 /* AFURLRequestSerialization.h in Headers */,
 				A6DAA6F3FA6A06808494CCB4 /* AFURLResponseSerialization.h in Headers */,
+				8B83612F1B330C32004657FB /* Constants.h in Headers */,
 				86F9A49990D2692DEFC86F06 /* AFURLSessionManager.h in Headers */,
 				F6BDB9116F788840B625F5B0 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
 				744E60E635284717BE46D116 /* UIAlertView+AFNetworking.h in Headers */,
@@ -609,6 +616,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8361301B330C32004657FB /* Constants.h in Headers */,
 				423140EC5A0261C50F4A46DE /* CUK_Client.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,6 +635,7 @@
 				90FB60BD86B8E1E153AE3FAE /* AFURLConnectionOperation.h in Headers */,
 				416E767FCE19F675465EA276 /* AFURLRequestSerialization.h in Headers */,
 				5DF06CC92A0E300B6F986EEA /* AFURLResponseSerialization.h in Headers */,
+				8B8361311B330C32004657FB /* Constants.h in Headers */,
 				DCBF608290D45699277E3CF4 /* AFURLSessionManager.h in Headers */,
 				932C4AA7724DB922C7BA939B /* UIActivityIndicatorView+AFNetworking.h in Headers */,
 				0394C45817E6DAB38FC929D6 /* UIAlertView+AFNetworking.h in Headers */,
@@ -643,6 +652,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8361321B330C32004657FB /* Constants.h in Headers */,
 				19C5C5E2496CE0A9B0E81D0F /* CUK_Client.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

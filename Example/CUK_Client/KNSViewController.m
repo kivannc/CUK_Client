@@ -7,6 +7,7 @@
 //
 
 #import "KNSViewController.h"
+#import "CUK_Client.h"
 
 @interface KNSViewController ()
 
@@ -18,6 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [[CUK_Client sharedClient] getMallsCallback:^(NSError *error, id responseObject) {
+        
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning
