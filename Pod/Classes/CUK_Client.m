@@ -9,14 +9,6 @@
 // Set this to your World Weather Online API Key
 
 //add this to your constan.h file
-#define USER_TOKEN @"USER_TOKEN"
-#define TOKEN_ERROR 8003
-
-static NSString * const MallframeItApiKey = @"<#PUT YOUR KEY HERE#>";
-
-static NSString * const MallframeItURL = @"<#PUT YOUR URL HERE#>";
-
-
 
 #import "CUK_Client.h"
 #import <sys/utsname.h>
@@ -32,9 +24,7 @@ NSString* deviceName()
 }
 
 
-
 @implementation CUK_Client
-
 
 
 + (CUK_Client *) sharedClient {

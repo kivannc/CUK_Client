@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "CUK_Client"
-  s.version          = "0.1.11"
+  s.version          = "0.1.12"
   s.summary          = "CUK_Client is HTTPClient that modified  for our needs."
   s.description      = "A base httpclient. Get it to your project than categorize it use to  according to your rest api."
   s.homepage         = "https://github.com/kivannc/CUK_Client"
