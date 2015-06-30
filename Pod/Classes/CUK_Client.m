@@ -12,9 +12,9 @@
 #define USER_TOKEN @"USER_TOKEN"
 #define TOKEN_ERROR 8003
 
-static NSString * const MallframeItApiKey = @"FF3XYDCC-D3A7-4B22-B5C8-5A6356977240";
+static NSString * const MallframeItApiKey = @"<#PUT YOUR KEY HERE#>";
 
-static NSString * const MallframeItURL = @"https://api.mallframe.com/";
+static NSString * const MallframeItURL = @"<#PUT YOUR URL HERE#>";
 
 
 
@@ -87,14 +87,14 @@ NSString* deviceName()
                if (strToken) {
                    [self saveToken:strToken];
                    if (compilation){
-                       compilation ( nil , YES );
+                       return compilation ( nil , YES );
                    }
                }
                else {
                    //Problem about token give error;
                    if (compilation){
                        id error = [responseObject valueForKey:@"error"];
-                       compilation ( [NSString stringWithFormat:@"%@ - %@", [error valueForKey:@"code"], [error valueForKey:@"msg"]] , NO );
+                       return compilation ( [NSString stringWithFormat:@"%@ - %@", [error valueForKey:@"code"], [error valueForKey:@"msg"]] , NO );
                    }
                }
                
@@ -102,7 +102,7 @@ NSString* deviceName()
        }
        failure:^(NSURLSessionDataTask *task, NSError *error) {
            NSLog(@"error %@" , [error localizedDescription]);
-           compilation ( [error localizedDescription] ,NO );
+           return compilation ( [error localizedDescription] ,NO );
        }];
     
 }
@@ -118,7 +118,8 @@ NSString* deviceName()
         if (!responseObject) {
             return compilation( @"Something went wrong try again never :)"  ,  nil);
         }
-        NSLog(@"JSON: %@", [responseObject description]);
+        
+        //        NSLog(@"JSON: %@", [responseObject description]);
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             NSDictionary *error = responseObject[@"error"];
             if ( error) {
@@ -136,6 +137,7 @@ NSString* deviceName()
                         
                         NSLog(@"Token was expired. Now it renewed and you can make a new post request");
                         
+                        [self setHeader];
                         [self POST:route parameters:paramaters success:^(NSURLSessionDataTask *task, id responseObject) {
                             NSLog(@"You made it. Expired token is renewed and the request is made. Good Job.");
                             if (!responseObject) {
@@ -150,7 +152,7 @@ NSString* deviceName()
                         }];
                         
                     };
-                    [self retrieveToken:retrieveTokenBlock];
+                    return [self retrieveToken:retrieveTokenBlock];
                 }
                 
                 return compilation ( [NSString stringWithFormat:@"%@ - %@" ,code, error] ,nil );
@@ -184,11 +186,13 @@ NSString* deviceName()
 
 
 - (void)saveToken:(NSString*) token {
-    [[NSUserDefaults standardUserDefaults] setObject:token forKey:USER_TOKEN];
+    NSString *fullToken = [NSString stringWithFormat:@"BEARER %@",token ];
+    [[NSUserDefaults standardUserDefaults] setObject:fullToken forKey:USER_TOKEN];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (NSString *) getToken {
+    
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOKEN];
     if (!token || token.length ==0) {
         token = @"Yeni_token_lazim";
@@ -198,7 +202,7 @@ NSString* deviceName()
 }
 
 - (void) setHeader {
-      [self.requestSerializer setValue:[self getToken] forHTTPHeaderField:@"Authorization"];
+    [self.requestSerializer setValue:[self getToken] forHTTPHeaderField:@"Authorization"];
 }
 
 - (NSDictionary *) getInfoObject   {
