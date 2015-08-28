@@ -3,7 +3,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'CUK_Client_Example', :exclusive => true do
   pod "CUK_Client", :path => "../"
-  pod "AFNetworking", "~> 2.0"
+  pod "AFNetworking", "2.5.4"
 end
 
 target 'CUK_Client_Tests', :exclusive => true do

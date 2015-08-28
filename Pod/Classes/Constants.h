@@ -22,6 +22,6 @@ typedef void (^DefaultBooleanResultBlock)( NSString *error, BOOL success);
 #define USER_TOKEN @"USER_TOKEN"
 #define TOKEN_ERROR 8003
 
-static NSString * const MallframeItApiKey = @"<#PUT YOUR KEY HERE#>";
+static NSString * const MallframeItApiKey = @"";
 
-static NSString * const MallframeItURL = @"<#PUT YOUR URL HERE#>";
+static NSString * const MallframeItURL = @"";
