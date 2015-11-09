@@ -16,12 +16,13 @@
 //  BLOCKS
 
 typedef void (^DefaultVoidResultBlock)();
-typedef void (^DefaultIdResultBlock)(NSString *error, id responceObject );
+typedef void (^DefaultIdResultBlock)(NSString *error, id responseObject );
 typedef void (^DefaultBooleanResultBlock)( NSString *error, BOOL success);
 
 #define USER_TOKEN @"USER_TOKEN"
 #define TOKEN_ERROR 8003
 
-static NSString * const MallframeItApiKey = @"";
 
-static NSString * const MallframeItURL = @"";
+static NSString * const MallframeItApiKey = @"AA3XYDCC-D3A7-4B22-B5C8-5A6356977240";
+
+static NSString * const MallframeItURL = @"https://api.mallframe.com/";

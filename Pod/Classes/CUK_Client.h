@@ -30,6 +30,8 @@
 
 - (void)getHowTeWebviews: (NSString *) mallId completion:(DefaultIdResultBlock) completion;
 
+- (void)getCurrentUser:(NSString *) mallId userId:(NSString *)userId completion:(DefaultIdResultBlock) completion;
+
 //USER Methods
 
 - (void)loginWithMail:(NSString *) email password:(NSString *) password mallID:(NSString *) mallID completion:(DefaultIdResultBlock) completion;

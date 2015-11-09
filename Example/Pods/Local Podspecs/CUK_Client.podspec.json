@@ -1,16 +1,16 @@
 {
   "name": "CUK_Client",
-  "version": "0.1.0",
+  "version": "0.1.14",
   "summary": "CUK_Client is HTTPClient that modified  for our needs.",
   "description": "A base httpclient. Get it to your project than categorize it use to  according to your rest api.",
-  "homepage": "https://bitbucket.org/erturkkivanc/cuk_client",
+  "homepage": "https://github.com/kivannc/CUK_Client",
   "license": "MIT",
   "authors": {
     "Kivanc ERTURK": "kivanc@kns.com.tr"
   },
   "source": {
-    "git": "https://erturkkivanc@bitbucket.org/erturkkivanc/cuk_client.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/kivannc/CUK_Client.git",
+    "tag": "0.1.14"
   },
   "platforms": {
     "ios": "7.0"

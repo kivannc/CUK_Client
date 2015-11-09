@@ -20,11 +20,11 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - CUK_Client (0.1.0):
+  - CUK_Client (0.1.14):
     - AFNetworking (~> 2.3)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.0)
+  - AFNetworking (= 2.5.4)
   - CUK_Client (from `../`)
 
 EXTERNAL SOURCES:
@@ -33,6 +33,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  CUK_Client: a1153bf923d77a094b2f5cb6072e3ab1ca5c1dcb
+  CUK_Client: 470128fbdfd76ea3aebf6912aacce6c1bb7ace5b
 
 COCOAPODS: 0.37.2

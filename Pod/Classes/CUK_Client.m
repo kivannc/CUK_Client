@@ -273,6 +273,25 @@ NSString* deviceName()
     
 }
 
+- (void)getCurrentUser:(NSString *) mallId userId:(NSString *)userId completion:(DefaultIdResultBlock) completion {
+    
+    NSDictionary *parameters = @{
+                                 @"info" : @{
+                                         @"language" : [self getLanguage],
+                                         @"device" : @"iOS",
+                                         @"deviceModel" : deviceName()
+                                         },
+                                 @"data": @{
+                                         @"userid":userId,
+                                         @"mallid":mallId
+                                         }
+                                 };
+    
+    NSString *route = @"v1/user/get";
+    
+    [self makeRequestPost:route WithParameters:parameters completion:completion];
+}
+
 - (void) makeRequestGet:(NSString *) route withParamaters:(NSDictionary *)parameters completion:(DefaultIdResultBlock) completion {
     
     [self GET:route
@@ -372,15 +391,7 @@ NSString* deviceName()
                                          @"language" : [self getLanguage],
                                          @"device" : @"iOS"
                                          },
-                                 @"data": @{
-                                         @"mall":[user valueForKey:@"mall"],
-                                         @"user_name":[user valueForKey:@"user_name"],
-                                         @"user_surname":[user valueForKey:@"user_surname"],
-                                         @"user_gender":[user valueForKey:@"user_gender"],
-                                         @"user_birthdate":[user valueForKey:@"user_birthdate"],
-                                         @"user_mail":[user valueForKey:@"user_mail"],
-                                         @"user_password":[user valueForKey:@"user_password"],
-                                         }
+                                 @"data": user
                                  };
     
     NSString *route = @"v1/user/register";

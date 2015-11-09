@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E39A3806D560F06792AE5617"
+               BlueprintIdentifier = "57E8366A6AFCFA06526A0E5D"
                BuildableName = "CUK_Client.bundle"
                BlueprintName = "Pods-CUK_Client_Example-CUK_Client-CUK_Client"
                ReferencedContainer = "container:Pods.xcodeproj">
